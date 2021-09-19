@@ -28,4 +28,13 @@ void nullAsertion() {
   print('a is $a');
   print('b is $b');
   print('c is $c');
+
+  print(isPositive(-12));
+}
+
+bool isPositive(int? anIntiger) {
+  if (anIntiger == null) {
+    return false;
+  }
+  return !anIntiger.isNegative;
 }
