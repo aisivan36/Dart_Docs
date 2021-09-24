@@ -2,7 +2,7 @@
 
 void main() {
   var foo = const [5, 6, 7];
-  const baz = []; // Equivalent to `const []`
+  // const baz = []; // Equivalent to `const []`
   foo = [1, 2, 3]; // Was const []
 
   /// You can’t change the `value` of a `const` variable:

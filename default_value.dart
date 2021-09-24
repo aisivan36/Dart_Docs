@@ -1,12 +1,12 @@
-void main() {
-  int? lineCount;
-  assert(lineCount == null);
+// void main() {
+//   int? lineCount;
+//   assert(lineCount == null);
 
-  if (weLikeToCount) {
-    lineCount = countLines();
-  } else {
-    lineCount = 0;
-  }
+//   if (weLikeToCount) {
+//     lineCount = countLines();
+//   } else {
+//     lineCount = 0;
+//   }
 
-  print(lineCount);
-}
+//   print(lineCount);
+// }
