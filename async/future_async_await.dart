@@ -17,9 +17,15 @@ Future<int> returnThreeAsync() async {
 
 Future count() async {
   int total = 0;
-  total = await returnOneAsync();
-  total += await returnTwoAsync();
-  total += await returnThreeAsync();
+  total = await returnOneAsync().then((value) {
+    return total += value;
+  });
+  total += await returnTwoAsync().then((value) {
+    return total += value;
+  });
+  total += await returnThreeAsync().then((value) {
+    return total += value;
+  });
 
   print(result = total.toString());
 }
