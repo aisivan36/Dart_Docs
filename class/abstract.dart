@@ -3,7 +3,7 @@ abstract class ForIvan {
   void write();
 }
 
-class NothingToWorry {
+class NothingToWorry extends ForIvan {
   void say() {
     print('This is an abtract');
   }
@@ -13,8 +13,24 @@ class NothingToWorry {
   }
 }
 
+class AnotherProblem extends ForIvan {
+  void say() {
+    print('IT has another problem to say');
+  }
+
+  void write() {
+    print('The problems is you need to change yourself!');
+  }
+}
+
 void main() {
   NothingToWorry about = NothingToWorry();
   about.say();
   about.write();
+
+  print('-------------------------');
+
+  AnotherProblem theproblem = AnotherProblem();
+  theproblem.say();
+  theproblem.write();
 }
