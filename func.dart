@@ -1,7 +1,7 @@
 void main() {
-  loek(lack: 'ivan', leaf: 'terrible');
+  loek(name: 'ivan', status: 'terrible');
 }
 
-void loek({String? leaf, String? lack}) {
-  print('$leaf $lack');
+void loek({String? status, String? name}) {
+  print('$status $name');
 }
