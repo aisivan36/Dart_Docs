@@ -1,5 +1,3 @@
-import 'dart:html';
-
 class Animal {
   void move() {
     print('changed posistion');
