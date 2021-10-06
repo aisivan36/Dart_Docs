@@ -2,10 +2,11 @@ import 'dart:math';
 
 abstract class Shape {
   factory Shape({String? type}) {
-    if (type == 'circle') return Circle(radius: 2);
-    if (type == 'square') return Square(side: 2);
+    if (type == 'circle') return Circle(radius: 2); // call Circle class
 
-    /// To trigger exception, don't implement a check for 'triangle'.
+    if (type == 'square') return Square(side: 2); // call Square class
+
+    /// To trigger `exception`, don't `implement` a check for `'triangle'`.
     throw 'Can\'t create $type';
   }
   num get area;
