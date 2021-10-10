@@ -1,3 +1,7 @@
+/// [Note]: In Dart, [switch] statements don’t support ranges like [number > 5].
+///  [Only == equality] checking is [allowed]. If your [conditions] involve [ranges],
+///  then you should use [if] [statements]
+
 void main() {
   const number = 3;
 
