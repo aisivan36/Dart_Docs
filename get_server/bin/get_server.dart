@@ -10,7 +10,7 @@ Future<void> main() async {
   if (statusCode == 200) {
     final rawJsonString = response.body;
     final jsonMap = jsonDecode(rawJsonString);
-    final todo = Todo.fromJson(jsonMap);
+    final todo = Todo.fromJson(jsonMap); // [factory] [fromJson] method
     print(todo);
   } else {
     throw HttpException('$statusCode');
