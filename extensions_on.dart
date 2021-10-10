@@ -5,7 +5,7 @@ void main() {
   print('Normal method: $decode \n');
 
   /// With [Extension] on
-  final secret = 'abcd'.encoded; // we can pass it value without parameter.
+  final secret = 'abcd'.encoded; // we can pass it value without parentheses.
   print('Extension on: $secret \n');
 
   /// more examples to call [extension]
