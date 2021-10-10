@@ -10,7 +10,15 @@ void main() {
 
   /// more examples to call [extension]
   final language = ProgrammingLanguage.dart;
-  print('More Extension:  ${language.isStronglyTyped}');
+  print('More Extension:  ${language.isStronglyTyped} \n');
+
+  /// Refactoring to remove code duplication
+  /// Refactor String
+  final original = 'I like extensions';
+  final theSecret = original.theEncoded;
+  final revealed = original.theDecoded;
+  print(theSecret);
+  print(revealed);
 }
 
 /// Normal method
@@ -66,5 +74,25 @@ extension on ProgrammingLanguage {
       default:
         throw Exception('Unknown Programming Language $this');
     }
+  }
+}
+
+/// Refactoring to remove code duplication
+/// Refactor String
+extension on String {
+  String get theEncoded {
+    return _code(1);
+  }
+
+  String get theDecoded {
+    return _code(-1);
+  }
+
+  String _code(int step) {
+    final output = StringBuffer();
+    for (final codePoint in runes) {
+      output.writeCharCode(codePoint + step);
+    }
+    return output.toString();
   }
 }
