@@ -28,7 +28,7 @@ class Todo {
   final bool completed;
   final int id;
   final String title;
-  final userId;
+  final int userId;
 
   factory Todo.fromJson(Map<String, Object?> jsonMap) {
     return Todo(
