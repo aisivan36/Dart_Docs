@@ -4,8 +4,8 @@ class User {
   User({required this.id, required this.name});
 
   factory User.fromJson(Map<String, dynamic> json) {
-    final userId = json['id'] as int;
-    final userName = json['name'] as String;
+    final userId = json['id'];
+    final userName = json['name'];
     return User(id: userId, name: userName);
   }
 
@@ -15,9 +15,17 @@ class User {
         name = json['name'] as String;
 }
 
+class Derived extends User {
+  Derived(Map<String, dynamic> json) : super.fromJsonAlready(json);
+}
+
 void main(List<String> args) {
+  // final ivan = {'id': 10, 'name': 'ivan'};
+  // final derived = User.fromJson(ivan);
+  // print('id: ${derived.id}\nname: ${derived.name}');
+
   final ivan = {'id': 10, 'name': 'ivan'};
-  final derived = User.fromJson(ivan);
+  final derived = Derived(ivan);
   print('id: ${derived.id}\nname: ${derived.name}');
 }
 
