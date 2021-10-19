@@ -20,13 +20,14 @@ class Derived extends User {
 }
 
 void main(List<String> args) {
-  // final ivan = {'id': 10, 'name': 'ivan'};
-  // final derived = User.fromJson(ivan);
-  // print('id: ${derived.id}\nname: ${derived.name}');
-
   final ivan = {'id': 10, 'name': 'ivan'};
-  final derived = Derived(ivan);
+  final derived = User.fromJson(ivan);
   print('id: ${derived.id}\nname: ${derived.name}');
+
+  print('===========  Not Factory');
+  final notFactory = {'id': 10, 'name': 'ivan'};
+  final derivative = Derived(notFactory);
+  print('id: ${derivative.id}\nname: ${derivative.name}');
 }
 
 
